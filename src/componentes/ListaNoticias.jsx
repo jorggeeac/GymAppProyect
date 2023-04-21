@@ -7,10 +7,10 @@ function ListaNoticias() {
 
   return (
     <div className='contenedor-noticias'>
-      {data.map(noticia =>
+      {data.slice(0).reverse().map(noticia =>
         <Noticia
-          key={noticia.id}
-          id={noticia.id}
+          key={noticia.idNoticia}
+          id={noticia.idNoticia}
           titulo={noticia.titulo}
           fecha={noticia.fecha}
           imagen={noticia.imagen}
