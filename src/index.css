@@ -1,0 +1,26 @@
+:root{
+    margin:0;
+    padding:0;
+    box-sizing:content-box;
+}
+.gridPrueba{
+    text-align: center;
+    border-radius: 6px;
+    min-width: 300px !important;
+    margin: 10px !important;
+    max-width: 400px !important;
+    box-shadow: 0 2px 10px #0D47A1;
+}
+.itemGridLogin{
+    padding:10px 18px;
+}
+.crearCuenta{
+    text-decoration: none !important;
+    list-style: none !important;
+    
+}
+.crearCuentaP{
+    margin-right: 18px !important;
+    color: #161616cc;
+    font-size:13px;
+}
