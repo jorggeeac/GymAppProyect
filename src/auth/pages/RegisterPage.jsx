@@ -2,7 +2,7 @@ import { useMemo, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link as RouterLink } from "react-router-dom";
 import { startRegisterUserWithEmailPassword} from "../../store/auth/thunks";
-import { useForm } from "../../hooks/useForm";
+import { useForm } from "../../hooks/UseForm";
 import { Alert, Button, Grid, Link, Stack, TextField, Typography } from "@mui/material";
 import { AuthLayout } from "../layout/authLayout";
 import { AntSwitch } from "./ant";

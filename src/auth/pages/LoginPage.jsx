@@ -2,7 +2,7 @@ import { useMemo } from "react";
 import { useDispatch, useSelector} from "react-redux";
 import { Link as RouterLink } from "react-router-dom";
 import { startGoogleSignIn, startLoginWithEmailPassword } from "../../store/auth/thunks";
-import { useForm } from "../../hooks/useForm";
+import { useForm } from "../../hooks/UseForm";
 import { Alert, Button, Grid, Link, TextField, Typography } from "@mui/material";
 import { Google } from "@mui/icons-material";
 import { AuthLayout } from "../layout/authLayout";
