@@ -18,13 +18,13 @@ const app = initializeApp(firebaseConfig);
 export const storage = getStorage(app);
 
 export async function uploadFile (file){
-    const storageRef = ref(storage, v4())
+    const storageRef = ref(storage, 'ejercicios/'+v4())
     await uploadBytes(storageRef, file)
     const url= getDownloadURL(storageRef)
     return url; //guarda la url de la imagen
 }
 export async function uploadworkout (file){
-  const storageRef2 = ref(storage, 'rutinas/videos')
+  const storageRef2 = ref(storage, 'rutinas/'+v4())
   await uploadBytes(storageRef2, file)
   const url= getDownloadURL(storageRef2)
   return url; //guarda la url de la imagen
