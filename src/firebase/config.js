@@ -1,5 +1,4 @@
 import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
 import {getStorage, ref, uploadBytes, getDownloadURL} from "firebase/storage";
 import {v4} from "uuid";
 
@@ -23,4 +22,10 @@ export async function uploadFile (file){
     await uploadBytes(storageRef, file)
     const url= getDownloadURL(storageRef)
     return url; //guarda la url de la imagen
+}
+export async function uploadworkout (file){
+  const storageRef2 = ref(storage, 'rutinas/videos')
+  await uploadBytes(storageRef2, file)
+  const url= getDownloadURL(storageRef2)
+  return url; //guarda la url de la imagen
 }
