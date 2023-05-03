@@ -2,6 +2,9 @@ import { useState } from 'react'
 import './App.css'
 import { uploadFile } from './firebase/config'
 import {uploadworkout} from './firebase/config'
+import {Button, Form } from 'react-bootstrap'
+
+
 
 function App() {
 
@@ -20,25 +23,25 @@ function App() {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <div>Ejercicios</div>
+    <Form onSubmit={handleSubmit}>
+      <Form.Control size="lg" type="text" placeholder="Ejercicios" />
       <input 
         type='file' 
         name='' 
         id='' 
         onChange={e => uploadFile(e.target.files[0])}
       />
-      <button> Subir </button>
+      <Button  variant="outline-success"> Subir </Button>
 
-      <div>Rutinas</div>
+      <Form.Control size="lg" type="text" placeholder="Rutinas" />
       <input 
         type='file' 
         name='' 
         id='' 
         onChange={e => uploadworkout(e.target.files[0])}
       />
-      <button> Subir </button>
-    </form>
+      <Button variant="outline-success"> Subir </Button>
+    </Form>
   )
 }
 
