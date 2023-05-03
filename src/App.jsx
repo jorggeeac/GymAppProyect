@@ -1,9 +1,7 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 import { uploadFile } from './firebase/config'
-
+import {uploadworkout} from './firebase/config'
 
 function App() {
 
@@ -13,7 +11,8 @@ function App() {
     e.preventDefault();
     try{
       const result = await uploadFile(file);
-      console.log(result)
+      const result2 = await uploadworkout(file);
+      console.log(result, result2)
     }catch(error){
       console.error(error);
     }
@@ -22,6 +21,7 @@ function App() {
 
   return (
     <form onSubmit={handleSubmit}>
+      <div>Ejercicios</div>
       <input 
         type='file' 
         name='' 
@@ -29,8 +29,16 @@ function App() {
         onChange={e => uploadFile(e.target.files[0])}
       />
       <button> Subir </button>
+
+      <div>Rutinas</div>
+      <input 
+        type='file' 
+        name='' 
+        id='' 
+        onChange={e => uploadworkout(e.target.files[0])}
+      />
+      <button> Subir </button>
     </form>
-    
   )
 }
 
