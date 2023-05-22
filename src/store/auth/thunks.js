@@ -40,8 +40,8 @@ export const startRegisterUserWithEmailPassword = ({ email, password, displayNam
         dispatch( login({ displayName, photoURL, uid, email, isAdminMode }) );
 
         
-        const newDoc = doc( collection( FirebaseDB, `${ uid }/auth/userRole/` ) );
-        await setDoc( newDoc, {role: isAdminMode});
+        const newDoc = doc( collection( FirebaseDB, `usuarios/${ uid }/credentials/` ) );
+        await setDoc( newDoc, {role: isAdminMode, displayName: displayName, photoURL: photoURL, email:email, password: password});
 
     }
 

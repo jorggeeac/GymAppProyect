@@ -1,6 +1,6 @@
 import { useMemo, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Link as RouterLink } from "react-router-dom";
+import { Link as RouterLink, useNavigate } from "react-router-dom";
 import { startRegisterUserWithEmailPassword} from "../../store/auth/thunks";
 import { useForm } from "../../hooks/UseForm";
 import { Alert, Button, Grid, Link, Stack, TextField, Typography } from "@mui/material";
@@ -26,6 +26,8 @@ export const RegisterPage = () => {
     
     const dispatch = useDispatch();
 
+    const navigate = useNavigate();
+
     const [formSubmitted, setformSubmitted] = useState(false);
 
     const { displayName, email, password, onInputChange,onToogleChange, formState, displayNameValid, passwordValid, emailValid, isFormValid } =useForm( formData, formValidation);
@@ -43,7 +45,7 @@ export const RegisterPage = () => {
         if (!isFormValid) return;
 
         dispatch(startRegisterUserWithEmailPassword( formState ));
-       
+        navigate('/inicio');
     } 
 
 
@@ -124,7 +126,7 @@ export const RegisterPage = () => {
                 </Grid>
 
                 <Grid container direction='row' justifyContent='end' mb={0.9}>
-                        <Link component={ RouterLink } className="crearCuenta" to="/auth/login">
+                        <Link component={ RouterLink } className="crearCuenta" to="/login">
                             <Typography variant="p" className="crearCuentaP">Ya tienes cuenta? Inicia sesión</Typography>
                         </Link>
                 </Grid>

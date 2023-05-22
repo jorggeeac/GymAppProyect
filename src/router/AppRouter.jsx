@@ -39,9 +39,12 @@ export const AppRouter = () => {
         {
           (status === 'authenticated')
             ? <Route path="/*" element={ <GymRoutes /> } />
-            : <Route path="/auth/*" element={ <AuthRoutes /> } />
+            : <Route path="/*" element={ <AuthRoutes /> } />
         }
-          <Route path='/*' element={ <Navigate to='/auth/login' />  } />
+              {
+          (status === 'not-authenticated') &&
+          <Route path="/*" element={ <Navigate to="/login" /> } />
+        }
 
     </Routes>
   )
