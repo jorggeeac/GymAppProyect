@@ -4,7 +4,7 @@ import { FirebaseDB } from "../firebase/config";
 
 export const getUserRole = async( uid ) =>{
 
-    const docUserRole = collection( FirebaseDB, `usuarios/${ uid }/userRole/` );
+    const docUserRole = collection( FirebaseDB, `usuarios/${ uid }/credentials/` );
     const showDocIsAdminMode =await getDocs( docUserRole );
     
     const role = [];
