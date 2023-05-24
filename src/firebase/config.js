@@ -1,6 +1,7 @@
 import { initializeApp } from "firebase/app";
-import {getStorage, ref, uploadBytes, getDownloadURL} from "firebase/storage";
-import {v4} from "uuid";
+import { getAuth } from 'firebase/auth';
+import { getFirestore } from 'firebase/firestore/lite';
+
 
 const firebaseConfig = {
   apiKey: "AIzaSyAwkyCSke5MXKnyqVhdMFt5AkF0kMDgubM",
@@ -12,20 +13,7 @@ const firebaseConfig = {
   measurementId: "G-TBRQXLME5Q"
 };
 
-// Initialize Firebase
-//const analytics = getAnalytics(app);
-const app = initializeApp(firebaseConfig);
-export const storage = getStorage(app);
 
-export async function uploadFile (file){
-    const storageRef = ref(storage, 'ejercicios/'+v4())
-    await uploadBytes(storageRef, file)
-    const url= getDownloadURL(storageRef)
-    return url; //guarda la url de la imagen
-}
-export async function uploadworkout (file){
-  const storageRef2 = ref(storage, 'rutinas/'+v4())
-  await uploadBytes(storageRef2, file)
-  const url= getDownloadURL(storageRef2)
-  return url; //guarda la url de la imagen
-}
+export const FirebaseApp = initializeApp( firebaseConfig );
+export const FirebaseAuth = getAuth( FirebaseApp );
+export const FirebaseDB = getFirestore( FirebaseApp );
