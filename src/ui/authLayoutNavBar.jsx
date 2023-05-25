@@ -2,7 +2,7 @@ import { NavLink, useNavigate } from "react-router-dom"
  import 'boxicons';
 import './ui.css';
 import { useDispatch, useSelector } from "react-redux";
-import imagenDefault from "../../assets/imagenDefaultDesign.jpg"
+import imagenDefault from "../assets/imagenDefaultDesign.jpg"
 import { startLogout } from "../store/auth/thunks";
 
 export const AuthLayoutNavBar = () => {
