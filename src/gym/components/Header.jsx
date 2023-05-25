@@ -5,7 +5,9 @@ import header from '../../assets/header.png';
 const Header = () => {
   return (
     <header>
-      <a href='/inicio'><img className='imagen-header' src={header} /></a>
+      <div className='contenedor-header'>
+        <a href='/inicio'>Pocket Gym</a>
+      </div>
     </header>
   );
 };
