@@ -1,7 +1,7 @@
 import React from 'react';
 import data from '../noticias.json';
 import Noticia from './Noticia';
-// import '../hojas-de-estilo/ListaNoticias.css';
+import '../hojas-de-estilo/ListaNoticias.css';
 
 
 

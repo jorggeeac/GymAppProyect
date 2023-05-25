@@ -1,7 +1,7 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import data from '../noticias.json';
-// import '../hojas-de-estilo/NoticiaCompleta.css';
+import '../hojas-de-estilo/NoticiaCompleta.css';
 
 function NoticiaCompleta() {
   const params = useParams();
@@ -10,10 +10,10 @@ function NoticiaCompleta() {
 
   return (
     <div className='contenedor-noticia-completa'>
-      {/* <div className='titulo-noticia-completa'>{noticia.titulo}</div>
+      <div className='titulo-noticia-completa'>{noticia.titulo}</div>
       <div className='fecha-noticia-completa'>{noticia.fecha}</div>
       <img className='imagen-noticia-completa' src={noticia.imagen} alt={noticia.titulo}/>
-      <div className='noticia-completa'>{noticia.noticia}</div> */}
+      <div className='noticia-completa'>{noticia.noticia}</div>
     </div>
   )
 }

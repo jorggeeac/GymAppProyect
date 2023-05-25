@@ -16,7 +16,7 @@ export const AuthLayoutNavBar = () => {
     const logout = () => {
     dispatch(startLogout());
   
-    navigate('/login');
+     navigate('/login');
     }
     
   return (
@@ -97,7 +97,7 @@ export const AuthLayoutNavBar = () => {
                 <li className="prueba3">
                     <a className="subclassNav">
                         <div className="imgPhoto">
-                            <img src={photoURL || imagenDefault  } alt="foto de perfil" className="photoURL"/>
+                            <img src={photoURL || imagenDefault } alt="foto de perfil" className="photoURL"/>
                         </div>
 
                         <span className="nav-text2">

@@ -1,5 +1,5 @@
 import React from 'react';
-// import '../hojas-de-estilo/Alimento.css';
+import '../hojas-de-estilo/Alimento.css';
 
 function Alimento( {name, serving_size_g, calories, fat_total_g, fat_saturated_g, protein_g, sodium_mg, potassium_mg, cholesterol_mg, carbohydrates_total_g, fiber_g, sugar_g}) {
   return (

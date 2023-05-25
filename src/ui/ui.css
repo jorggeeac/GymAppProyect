@@ -111,7 +111,7 @@ nav.main-menu {
     width:190px;
     top: -1px;
     font-family: 'Titillium Web', sans-serif;
-    padding-left: 20px;
+    padding-left: 34px;
     user-select: none;
 }
 .subclassNav:has(.nav-text2):hover{

@@ -1,0 +1,9 @@
+.contenedor-noticias {
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+  display: grid;
+  grid-template-columns: 420px 420px;
+  margin: 20px;
+  gap: 20px;
+}

@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import Alimento from './Alimento';
-// import '../hojas-de-estilo/Api.css';
-import { AuthLayoutNavBar } from '../../ui/authLayoutNavBar';
+import '../hojas-de-estilo/Api.css';
 
 function Api() {
 
@@ -27,11 +26,6 @@ function Api() {
   }
 
   return (
-
-    <>
-    <AuthLayoutNavBar />
-
-
     <div className='contenedor-api'>
       <form
         className='busqueda-formulario'
@@ -66,7 +60,6 @@ function Api() {
         }
       </div>
     </div>
-    </>
   );
 }
 

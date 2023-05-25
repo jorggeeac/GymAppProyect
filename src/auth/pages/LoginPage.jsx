@@ -1,6 +1,6 @@
 import { useMemo } from "react";
 import { useDispatch, useSelector} from "react-redux";
-import { Link as RouterLink } from "react-router-dom";
+import { Link as RouterLink, useNavigate } from "react-router-dom";
 import { startGoogleSignIn, startLoginWithEmailPassword } from "../../store/auth/thunks";
 import { useForm } from "../../hooks/UseForm";
 import { Alert, Button, Grid, Link, TextField, Typography } from "@mui/material";
@@ -10,6 +10,8 @@ import { AuthLayout } from "../layout/authLayout";
 export const LoginPage = () => {
   
     const dispatch = useDispatch();
+
+    const navigate = useNavigate();
 
     const { status, errorMessage } = useSelector( state => state.auth );
 
@@ -24,11 +26,13 @@ export const LoginPage = () => {
     event.preventDefault();
 
     dispatch( startLoginWithEmailPassword({email, password}) );
+    // navigate('/inicio');
   }
   
   const onGoogleSignIn = ()=>{
 
     dispatch( startGoogleSignIn() );
+    // navigate('/inicio');
   }
   
     return (
