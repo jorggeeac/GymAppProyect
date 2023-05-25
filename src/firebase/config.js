@@ -17,3 +17,16 @@ const firebaseConfig = {
 export const FirebaseApp = initializeApp( firebaseConfig );
 export const FirebaseAuth = getAuth( FirebaseApp );
 export const FirebaseDB = getFirestore( FirebaseApp );
+
+export async function uploadFile (file){
+  const storageRef = ref(storage, 'ejercicios/'+v4())
+  await uploadBytes(storageRef, file)
+  const url= getDownloadURL(storageRef)
+  return url; //guarda la url de la imagen
+}
+export async function uploadworkout (file){
+const storageRef2 = ref(storage, 'rutinas/'+v4())
+await uploadBytes(storageRef2, file)
+const url= getDownloadURL(storageRef2)
+return url; //guarda la url de la imagen
+}
