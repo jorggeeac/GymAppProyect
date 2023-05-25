@@ -1,17 +1,41 @@
-.contenedor-ejercicios {
-border: 1px solid rgb(219, 231, 219);
-border-radius: 7px;
-width: 100%;
-max-width: 1000px;
-margin: 0 auto;
+ @media (max-width: 768px) {
+    .contenedor-ejercicios {
+          width: 90%;
+        }
+        
+    .imagen-Ejercicios {
+        width: 80%;
+    }
+        
+    .resumen-Ejercicios {
+        font-size: 16px;
+    }
+ }
+        
+@media (min-width: 769px) and (max-width: 1200px) {
+    .contenedor-ejercicios {
+            width: 80%;
+    }
+        
+    .imagen-Ejercicios {
+        width: 70%;
+    }
+        
+    .resumen-Ejercicios {
+        font-size: 18px;
+    }
 }
-.imagen-ejercicios {
-display: block;
-margin: 0 auto;
-max-width: 50%;
-}
-.resumen-ejercicios {
-font-size: 20px;
-font-variant: small-caps;
-text-align: center;
+        
+@media (min-width: 1201px) {
+    .contenedor-ejercicios {
+        width: 60%;
+    }
+        
+    .imagen-Ejercicios {
+        width: 50%;
+    }
+        
+    .resumen-Ejercicios {
+        font-size: 20px;
+    }
 }
