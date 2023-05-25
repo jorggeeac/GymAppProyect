@@ -7,7 +7,6 @@ import { useSelector } from "react-redux";
 export const UsuarioRoutes = () => {
 
   const { status, isAdminMode } = useSelector(state => state.auth);
-  console.log(status+ " USUARIOS" )
 
   return (
       <Routes>
