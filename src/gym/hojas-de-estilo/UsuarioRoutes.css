@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.contenedor-botones {
+  padding-top: 40px;
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  padding-bottom: 40px;
+}
+
+.boton-noticias {
+  background-color: bisque;
+  height: 50px;
+  width: 200px;
+  font-size: 25px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.boton-nutricion {
+  background-color: greenyellow;
+  height: 50px;
+  width: 200px;
+  font-size: 25px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.boton-noticias:hover {
+  background-color: blueviolet;
+}
+
+.boton-nutricion:hover {
+  background-color: blueviolet;
+}

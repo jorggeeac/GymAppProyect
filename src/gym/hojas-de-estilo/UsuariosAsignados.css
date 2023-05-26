@@ -1,0 +1,49 @@
+.contenedor-usuarios {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 15px;
+  margin-left: 61px;
+}
+
+.contenedor-datos-usuario {
+  border-radius: 15px;
+  border: 2px solid black;
+  overflow: hidden;
+  width: 600px;
+  margin: 2px;
+  display: flex;
+  flex-direction: column;
+}
+
+.contenedor-usuario {
+  min-height: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nombre-usuario {
+  width: 100%;
+  height: 100%;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: capitalize;
+  font-weight: bold;
+}
+
+.contenedor-usuario.par {
+  background-color: darkseagreen;
+}
+
+.contenedor-usuario.impar {
+  background-color: blanchedalmond;
+}
+
+.titulo-usuarios-asignados {
+  font-size: 30px;
+}
